@@ -46,18 +46,14 @@ def sum_of_natural_numbers(n):
 # *******
 def centered_star_pyramid(n):
     shape=''
-    for i in range(n-i):
-        shape+=''
-    shape+='*\n'
-    for i in range(1,n):
-        shape+='**\n'
-    return shape
-
-def centered_star_pyramid(n):
-    shape = ''
-    for i in range(1, n+1):
-        # Add leading spaces to center the stars
-        spaces = ' ' * (n - i)
-        stars = '*' * (2 * i - 1)  # Odd number of stars in each row
-        shape += spaces + stars + '\n'
+    for i in range(1,n+1):
+        for j in range(n-i):
+            shape+=' '
+        for j in range(2*i-1):
+            shape+='*'
+        shape+='\n'
     return shape.rstrip()
+
+
+
+
